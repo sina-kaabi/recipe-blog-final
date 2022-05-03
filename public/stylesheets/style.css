@@ -115,3 +115,40 @@ ul li {
 #logout-form button {
   width: 120px;
 }
+
+.description {
+color: #000000;
+}
+
+.title {
+color: rgb(0, 0, 0);
+}
+
+.create {
+  background-color: rgb(24, 201, 77);
+  color: white;
+}
+
+.ingredients {
+  font-size: medium;
+  font-weight: lighter;
+  margin-left: 150px;
+  color: rgb(153, 153, 153);
+  
+}
+
+.category {
+  font-size: medium;
+  font-weight: lighter;
+  margin-left: 130px;
+  color: rgb(153, 153, 153);
+  
+}
+
+#subtitle {
+  margin-left: 30px;
+}
+
+.subtitle {
+  margin-left: 100px;
+}

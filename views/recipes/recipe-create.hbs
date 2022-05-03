@@ -2,38 +2,35 @@
 
 <form action="/recipes/create" method="POST">
 
-  <label> Title:
+  <label class="title"> Title:
     <input type="text" name="title" required />
   </label>
 
-  <label> Description:
+  <label class="description"> Description:
     <textarea name="description" cols="30" rows="4"></textarea>
   </label>
-<p>Select Category</p>
-  <label> Category:
-    <input type="radio" name="category" value="Thai"> Thai <br>
-    <input type="radio" name="category" value="American"> American <br>
-    <input type="radio" name="category" value="American"> Chinese <br>
-    <input type="radio" name="category" value="American"> Mexican <br>
-    <input type="submit" value="submit">  
+  <p class="category">Category</p>
+<p class="subtitle">Select Category:</p>
+   <label for="category1">Mexican</label> <input type="radio" name="category" id="category1" value="mexican"> <br>
+     <label for="category2">American</label> <input type="radio" name="category" id="category2" value="american"> <br>
+      <label for="category3">Chinese</label> <input type="radio" name="category" id="category3" value="chinese"> <br>
+       <label for="category4">Thai</label> <input type="radio" name="category" id="category4" value="thai"> <br>
+   
   </label>
+<br>  <br>  
 
-<label> Ingredients:
-<p>Select your favourite Ingredients</p>
+<p class="ingredients">Ingredients</p> 
+<p id="subtitle">Select your favourite Ingredients:</p> <br>
 
-    <select name="ingredients" class="form-select"  multiple>
-      <option selected>select ingredient</option>
-        <option name="ingredient1" value="Chicken">Chicken</option>
-        <option name="ingredient2" value="Beef">Beef</option>
-        <option name="ingredient3" value="Veg">Veg</option>
-        <option name="ingredient4" value="Tofu">Tofu</option>
-        <option name="ingredient5" value="Fish">Fish</option>
-        <option name="ingredient6" value="Tomato">Tomato</option>
-        <option name="ingredient7" value="Onions">Onions</option>
-        <option name="ingredient8" value="Carrots">Carrots</option>
-        <option name="ingredient9" value="Lettuce">Lettuce</option>
-    </select>
+
+  <label for="ingredient1">Chicken</label> <input type="checkbox" name="ingredient" id="ingredient1" value="chicken"> <br>
+      <label for="ingredient2">Beef</label> <input type="checkbox" name="ingredient" id="ingredient2" value="beef"> <br>
+      <label for="ingredient3">Fish</label> <input type="checkbox" name="ingredient" id="ingredient3" value="fish"> <br>
+      <label for="ingredient4">Veg</label> <input type="checkbox" name="ingredient" id="ingredient4" value="veg"> <br>
+     <label for="ingredient5">No Veg</label> <input type="checkbox" name="ingredient" id="ingredient5" value="no-veg"> <br><br>
+     
+      
   
 </label>
-  <button type="submit"> Create </button>
+  <button type="submit" class="create"> Create </button>
 </form>
