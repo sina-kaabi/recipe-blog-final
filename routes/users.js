@@ -22,9 +22,7 @@ router.post('/', (req, res) => {
 
 //Updating One
 
-router.patch('/:id', (req, res) => {
-    
-})
+
 
 //Deleting One
 

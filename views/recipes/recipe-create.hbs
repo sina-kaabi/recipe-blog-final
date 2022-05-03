@@ -19,15 +19,22 @@
   </label>
 
 <label> Ingredients:
-<input type="text" name="name">
 <p>Select your favourite Ingredients</p>
 
-    <input type="checkbox" name="Ingredient1" value="Chicken">Chicken<br>
-    <input type="checkbox" name="Ingredient2" value="Beef">Beef<br>
-    <input type="checkbox" name="Ingredient3" value="Veg">Veg<br>
-    <input type="checkbox" name="Ingredient4" value="Fish">Fish<br>
+    <select name="ingredients" class="form-select"  multiple>
+      <option selected>select ingredient</option>
+        <option name="ingredient1" value="Lactose intolerance">Lactose intolerance</option>
+        <option name="ingredient2" value="Gluten intolerance or sensitivity">Gluten intolerance or sensitivity</option>
+        <option name="ingredient3" value="Vegetarian">Vegetarian</option>
+        <option name="ingredient4" value="Vegan">Vegan</option>
+        <option name="ingredient5" value="Kosher">Kosher</option>
+        <option name="ingredient" value="Keto">Keto</option>
+        <option name="ingredient" value="Diabetes">Diabetes</option>
+        <option name="ingredient" value="Dairy-free">Dairy-free</option>
+        <option name="ingredient" value="Low carb">Low carb</option>
+        <option name="ingredient" value="Food allergies"></option>Food allergies</option>
+    </select>
   
-  <input type="submit" value="submit">  
 </label>
   <button type="submit"> Create </button>
 </form>
