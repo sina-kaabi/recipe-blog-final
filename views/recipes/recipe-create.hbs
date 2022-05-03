@@ -19,15 +19,21 @@
   </label>
 
 <label> Ingredients:
-<input type="text" name="name">
 <p>Select your favourite Ingredients</p>
 
-    <input type="checkbox" name="Ingredient1" value="Chicken">Chicken<br>
-    <input type="checkbox" name="Ingredient2" value="Beef">Beef<br>
-    <input type="checkbox" name="Ingredient3" value="Veg">Veg<br>
-    <input type="checkbox" name="Ingredient4" value="Fish">Fish<br>
+    <select name="ingredients" class="form-select"  multiple>
+      <option selected>select ingredient</option>
+        <option name="ingredient1" value="Chicken">Chicken</option>
+        <option name="ingredient2" value="Beef">Beef</option>
+        <option name="ingredient3" value="Veg">Veg</option>
+        <option name="ingredient4" value="Tofu">Tofu</option>
+        <option name="ingredient5" value="Fish">Fish</option>
+        <option name="ingredient6" value="Tomato">Tomato</option>
+        <option name="ingredient7" value="Onions">Onions</option>
+        <option name="ingredient8" value="Carrots">Carrots</option>
+        <option name="ingredient9" value="Lettuce">Lettuce</option>
+    </select>
   
-  <input type="submit" value="submit">  
 </label>
   <button type="submit"> Create </button>
 </form>

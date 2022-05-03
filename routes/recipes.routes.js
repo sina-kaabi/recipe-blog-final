@@ -1,7 +1,7 @@
 const Recipe = require("../models/Recipe.model");
 //const Author = require("../models/Author.model");
 const { db } = require("../models/Recipe.model");
-
+//const recipes = require("./routes/recipes.routes");
 const router = require("express").Router();
 const saySomething = (req, res, next) => {
     console.log("something");
@@ -19,49 +19,51 @@ res.send("it's not your lucky day my friend")
     }
 }
 
-// READ: display list of recipes
-router.get("/", checkIfUserLoggedIn, (req, res, next) => {
+// READ: create list of recipes
+router.get("recipes/create", checkIfUserLoggedIn, (req, res, next) => {
     Recipe.find()
-        .populate("author")
         .then((recipesArr) => {
-            res.render("recipes/recipes-list", { recipes: recipesArr });
+            res.render("recipes/recipe-create", { recipes: recipesArr });
         })
         .catch(err => {
-            console.log("error getting books from DB", err)
+            console.log("error getting recipes from DB", err)
             next(err);
         });
 });
 
+
+       // READ: display list of recipes
+  //     router.get("/recipes/create", checkIfUserLoggedIn, (req, res, next) => {
+    //    res.render("recipes/recipes-create”);
+  //  })
+   // .catch(err => {
+    //    console.log("error getting recipe/create view", err)
+   //     next(err);
+  //  });
 
 // READ: display list of recipes
-router.get("/recipes", (req, res, next) => {
-   Recipe.find()
-        .populate("author")
-        .then((recipesArr) => {
+router.get("/recipes/create", (req, res, next) => {
+
             res.render("recipes/recipes-list", { recipes: recipesArr });
         })
-        .catch(err => {
-            console.log("error getting books from DB", err)
-            next(err);
-        });
-});
+   
+     
+
+ 
 
 
 // CREATE: render form
-router.get("//create", (req, res, next) => {
-    Author.find()
-        .then((authorsArr) => {
-            res.render("recipes/recipe-create", {authors: authorsArr});
+router.get("/create", (req, res, next) => {
+  
+            res.render("recipes/recipe-create")
         })
-        .catch(err => {
-            console.log("error getting authors from DB", err)
-            next(err);
-        });    
-})
+        
+        
+
 
 
 // CREATE: process form
-router.post("/recipes/create", (req, res, next) => {
+router.post("/create", (req, res, next) => {
 
     const newRecipe = {
         title: req.body.title,
@@ -120,17 +122,17 @@ router.get("/recipes/:recipeId/edit", (req, res, next) => {
         });
 });
 
-//get to display and update a specific book
-router.get('/authors/:authorId/edit', (req, res, next) => {
-    const {authorId} = req.params;
+//get to display and update a specific book /*
+//router.get('/authors/:authorId/edit', (req, res, next) => {
+  //  const {authorId} = req.params;
 
-    Author.findById(authorId)
-    .then(authorToEdit => {
-        res.render('authors/author-edit.hbs',  {author: authorToEdit});
-
-    })
-    .catch(error => next(error));
-});
+  //  Author.findById(authorId)
+  //  .then(authorToEdit => {
+   //     res.render('authors/author-edit.hbs',  {author: authorToEdit});
+//
+  //  })
+   // .catch(error => next(error));
+//});
 
 
 

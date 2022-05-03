@@ -44,8 +44,9 @@ const myCustomMiddleware = (req, res, next) => {
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
 app.use("/", index);
-const recipes = require("./routes/recipes");
-app.use("/", recipes);
+const recipes = require("./routes/recipes.routes");
+app.use("/recipes", recipes);
+
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
